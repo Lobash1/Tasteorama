@@ -1,0 +1,93 @@
+:root {
+  /* 🎨 Кольори */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-500: #d9d9d9;
+  --color-brown-500: #9b6c43;
+  --color-brown-700: #652f0e;
+  --color-bg-light: #faf3e0;
+
+  --color-text: var(--color-black);
+  --color-bg: var(--color-bg-light);
+
+  /* 📱 Розміри контейнерів */
+  --max-width-mobile: 360px;
+  --max-width-tablet: 705px;
+  --max-width-desktop: 1224px;
+
+  /* 📐 Відступи контейнерів */
+  --padding-mobile: 32px;
+  --padding-tablet: 64px;
+  --padding-desktop: 100px;
+
+  /* 🅰️ Типографіка */
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* 🌍 Глобальні стилі */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+/* 🧠 Доступність */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 📦 Контейнер */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* max-width: var(--max-width-mobile); */
+  /* padding-left: var(--padding-mobile); */
+  /* padding-right: var(--padding-mobile); */
+  box-sizing: border-box;
+}
+
+/* @media screen and (min-width: 768px) {
+  .container {
+    padding-left: var(--padding-tablet);
+    padding-right: var(--padding-tablet);
+    max-width: var(--max-width-tablet);
+  }
+} */
+
+/* @media screen and (min-width: 1280px) {
+  .container {
+    padding-left: var(--padding-desktop);
+    padding-right: var(--padding-desktop);
+    max-width: var(--max-width-desktop);
+  }
+} */
+
+/* 🦶 Footer */
+main {
+  flex-grow: 1;
+}
