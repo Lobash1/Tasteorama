@@ -6,6 +6,14 @@ export default function SearchRecipe({ onSearch }) {
     evt.preventDefault();
     const form = evt.target;
     const recipe = form.elements.recipe.value;
+    // Якщо текстове поле порожнє, виводимо повідомлення
+    // і припиняємо виконання функції.
+    if (form.elements.recipe.value.trim() === '') {
+      alert('Please enter search term!');
+      return;
+    }
+    // У протилежному випадку викликаємо пропс
+    // і передаємо йому значення поля
     onSearch(recipe);
     form.reset();
   };

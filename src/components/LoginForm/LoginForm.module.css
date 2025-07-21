@@ -91,3 +91,23 @@
   font-size: 12px;
   margin-top: 4px;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 522px;
+    margin-top: 132px;
+  }
+
+  .wrapper {
+    max-width: 522px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding-bottom: 14px;
+  }
+  .wrapper {
+    max-width: 420px;
+    margin-top: 32px;
+  }
+}
