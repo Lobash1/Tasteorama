@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllRecipes,
   fetchRecipesForQuery,
-} from "../../redux/recipes/operations";
-// import RecipeList from "../../components/RecipeList/RecipeList";
-// import SearchRecipes from "../../components/SearchRecipes/SearchRecipes";
-// import Filters from "../../components/Filters/Filters";
+} from "../../redux/recipes/operations.js";
+import RecipeList from "../../components/RecipeList/RecipeList.jsx";
+import SearchRecipes from "../../components/SearchRecipes/SearchRecipes.jsx";
+import Filters from "../../components/Filters/Filters.jsx";
 import css from "./HomePage.module.css";
-import { resetSearchResults } from "../../redux/recipes/slice";
-import { fetchIngredients } from "../../redux/ingredients/operation";
-import { fetchCategory } from "../../redux/category/operation";
-import Container from "../../components/Container/Container";
+import { resetSearchResults } from "../../redux/recipes/slice.js";
+import { fetchIngredients } from "../../redux/ingredients/operations.js";
+import { fetchCategory } from "../../redux/category/operations.js";
+import Container from "../../components/Container/Container.jsx";
 
 const HomePage = () => {
   const dispatch = useDispatch();

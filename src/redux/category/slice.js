@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCategory } from "./operation";
+import { fetchCategory } from "./operations.js";
 
 const initialState = {
   category: [],

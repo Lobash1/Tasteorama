@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchIngredients } from "./operation";
+import { fetchIngredients } from "./operations.js";
 
 const initialState = {
   ingredients: [],

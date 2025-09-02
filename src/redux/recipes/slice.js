@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchFavorites, fetchRecipesByType } from "./operations";
-import { removeFavoriteRecipe } from "./operations";
-import { fetchAllRecipes, fetchRecipesForQuery } from "./operations";
+import { fetchFavorites, fetchRecipesByType } from "./operations.js";
+import { removeFavoriteRecipe } from "./operations.js";
+import { fetchAllRecipes, fetchRecipesForQuery } from ".//operations.js";
 
 const handlePending = (state) => {
   state.isLoading = true;

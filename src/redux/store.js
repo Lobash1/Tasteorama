@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { recipesReducer } from "./recipes/slice";
-import { ingredientsReducer } from "./ingredients/slice";
-import { categoryReducer } from "./category/slice";
-import { authReducer } from "./auth/slice";
+import { recipesReducer } from "./recipes/slice.js";
+import { ingredientsReducer } from "./ingredients/slice.js";
+import { categoryReducer } from "./category/slice.js";
+import { authReducer } from "./auth/slice.js";
 import storage from "redux-persist/lib/storage";
 import {
   persistStore,
