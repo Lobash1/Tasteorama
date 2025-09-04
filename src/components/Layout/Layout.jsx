@@ -1,13 +1,12 @@
-import { Suspense } from "react";
-// import Header from "../Header/Header";
+import { Suspense } from 'react';
+import Header from '../Header/Header.jsx';
 // import Footer from "../Footer/Footer";
-import css from "./Layout.module.css";
+import css from './Layout.module.css';
 
 const Layout = ({ children }) => {
   return (
     <div className={css.wrapper}>
-      {/* <Header /> */}
-      <h1>heder</h1>
+      <Header />
       <Suspense fallback={<p>Loading...</p>}>{children}</Suspense>
       {/* <Footer /> */}
     </div>

@@ -1,12 +1,12 @@
-import { useSelector } from "react-redux";
-import { selectIsLoggedIn } from "../../redux/auth/selectors.js";
-// import Navigation from "../Navigation/Navigation";
-// import UserMenu from "../UserMenu/UserMenu";
-// import AuthMenu from "../AuthMenu/AuthMenu";
-import css from "./Header.module.css";
-import { useState } from "react";
-import clsx from "clsx";
-import Container from "../Container/Container";
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
+import Navigation from '../Navigation/Navigation.jsx';
+import UserMenu from '../UserMenu/UserMenu.jsx';
+import AuthMenu from '../AuthMenu/AuthMenu.jsx';
+import css from './Header.module.css';
+import { useState } from 'react';
+import clsx from 'clsx';
+import Container from '../Container/Container';
 
 const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
