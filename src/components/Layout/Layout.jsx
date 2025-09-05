@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import Header from '../Header/Header.jsx';
-// import Footer from "../Footer/Footer";
+import Footer from '../Footer/Footer';
 import css from './Layout.module.css';
 
 const Layout = ({ children }) => {
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className={css.wrapper}>
       <Header />
       <Suspense fallback={<p>Loading...</p>}>{children}</Suspense>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

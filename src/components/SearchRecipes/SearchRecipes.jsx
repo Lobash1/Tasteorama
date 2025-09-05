@@ -1,3 +1,9 @@
+import Container from '../Container/Container.jsx';
+
 export default function SearchRecipes() {
-  return <h1>SearchRecipes</h1>;
+  return (
+    <Container>
+      <h1>SearchRecipes</h1>
+    </Container>
+  );
 }

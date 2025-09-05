@@ -1,0 +1,253 @@
+.backdrop {
+  display: flex;
+  justify-content: center;
+}
+.formWrapper {
+  background-color: #faf3e0;
+  border-radius: 32px;
+  padding: 48px 32px;
+  max-width: 362px;
+  margin: 56px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+  font-style: normal;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: #000;
+}
+
+.input {
+  width: 100%;
+  padding: 8px 40px 8px 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #9f9f9f;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #d9d9d9;
+  outline: 2px solid rgba(132, 131, 153, 0.5);
+}
+
+.invalid {
+  border-color: #c80000 !important;
+  outline: 2px solid rgba(200, 0, 0, 0.3);
+  color: #000;
+}
+
+.error {
+  color: #c80000;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+input:not(:placeholder-shown) {
+  color: #000;
+}
+
+.passwordField {
+  position: relative;
+}
+.passwordWrapper {
+  position: relative;
+  margin-top: 4px;
+}
+.togglePassword {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9b6c43;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.togglePassword:hover .toggleIcon {
+  stroke: #6d554b;
+}
+.eyeIcon {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  stroke: #000000;
+  fill: none;
+  overflow: visible;
+}
+
+.loginBtn {
+  background-color: #9b6c43;
+  color: white;
+  font-weight: 600;
+  border: 2px solid transparent;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 36px;
+  margin-bottom: 0px;
+  margin-top: 11px;
+  transition: all 0.3s ease;
+}
+
+.redirectInfo {
+  font-size: 14px;
+  color: #000;
+  margin-top: 4px;
+  font-weight: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.redirectLink {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #000;
+  margin-left: 4px;
+  cursor: pointer;
+  font-weight: 400px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.passwordWrapper {
+  position: relative;
+  margin-top: 4px;
+}
+.togglePassword {
+  position: absolute;
+  right: 0;
+  top: 56%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9b6c43;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  /* padding: 4px 8px; */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.toggleIcon {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  stroke: #000000;
+  fill: none;
+  overflow: visible;
+}
+
+.togglePassword:hover .toggleIcon {
+  stroke: #6d554b;
+}
+
+@media (min-width: 768px) {
+  .formWrapper {
+    min-width: 522px;
+    min-height: 399px;
+    margin: 132px 0px;
+  }
+
+  .title {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+
+  .input {
+    font-size: 16px;
+    height: 41px;
+  }
+
+  .loginBtn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .redirectInfo {
+    font-size: 15px;
+  }
+
+  .eyeIcon {
+    right: 12px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .formWrapper {
+    min-width: 420px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .loginBtn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .redirectInfo {
+    font-size: 14px;
+  }
+
+  .eyeIcon {
+    right: 10px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
