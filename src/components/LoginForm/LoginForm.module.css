@@ -114,7 +114,7 @@ input:not(:placeholder-shown) {
   border-radius: 8px;
   cursor: pointer;
   height: 36px;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   margin-top: 11px;
   transition: all 0.3s ease;
 }

@@ -1,0 +1,238 @@
+.hero {
+  background-color: #000000;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url('/Banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ===================== MOBILE ===================================*/
+@media screen and (max-width: 767px) {
+  .hero {
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, 230%;
+    background-position: center, -230px -90px;
+  }
+
+  .formikStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchForm {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .input {
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9f9f9f;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    max-width: 330px;
+    height: 48px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-items: left;
+    margin: 0 auto;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 330px;
+    height: 46px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--light-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .searchWrapper {
+    max-width: 768px;
+    width: 100%;
+    height: 513px;
+    margin: 0 auto;
+    padding: 128px 32px;
+  }
+
+  .heroHeader {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+    width: 329px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  .error {
+    color: #faf3e0;
+  }
+}
+
+/* ======================= TABLET ================================= */
+@media screen and (min-width: 768px) {
+  .searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 671px;
+    height: 46px;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9f9f9f;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background-color: white;
+    box-sizing: border-box;
+    align-items: center;
+    justify-items: left;
+    min-width: 471px;
+  }
+
+  .button {
+    width: 176px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--light-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .searchWrapper {
+    max-width: 768px;
+    width: 100%;
+    height: 443px;
+    margin: 0 auto;
+    padding: 128px 32px;
+  }
+
+  .heroHeader {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 48px;
+    width: 493px;
+    margin-bottom: 24px;
+  }
+
+  .error {
+    color: #faf3e0;
+  }
+}
+
+/* ======================= DESKTOP ================================ */
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-position: center 24%;
+  }
+
+  .searchForm {
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 661px;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9f9f9f;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background-color: white;
+    width: 459px;
+    height: 46px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .input:focus {
+    border-color: #fff;
+  }
+
+  .button {
+    width: 190px;
+    height: 46px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--light-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .button:hover {
+    background-color: #6d554b;
+  }
+
+  .button:focus {
+    border-color: #ffffff;
+  }
+
+  .searchWrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 443px;
+    padding: 128px 108px;
+    margin: 0 auto;
+  }
+
+  .heroHeader {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 48px;
+    width: 493px;
+    margin-bottom: 24px;
+  }
+
+  .error {
+    color: #faf3e0;
+  }
+}

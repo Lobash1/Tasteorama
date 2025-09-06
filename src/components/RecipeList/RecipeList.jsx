@@ -1,3 +1,48 @@
-export default function RecipeList() {
-  return <h1>RecipeList</h1>;
-}
+import RecipeCard from '../RecipeCard/RecipeCard.jsx';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn.jsx';
+import css from './RecipeList.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { nextPage, nextPageOnSearch } from '../../redux/recipes/slice.js';
+import { selectIsLoading } from '../../redux/recipes/selectors.js';
+import { HashLoader } from 'react-spinners';
+
+const RecipeList = ({ recipes, total, listOnSearch }) => {
+  const loader = useSelector(selectIsLoading);
+  const dispatch = useDispatch();
+
+  const handleLoadMore = () => {
+    dispatch(nextPage());
+  };
+  const handleLoadMoreOnSearch = () => {
+    dispatch(nextPageOnSearch());
+  };
+
+  const hasMore = recipes.length < total;
+
+  return (
+    <div>
+      {loader && (
+        <div className={css.loader}>
+          <HashLoader
+            color={'#9B6C43'}
+            size={100}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      )}
+      <ul className={css.list}>
+        {recipes.map(recipe => (
+          <li key={recipe._id} className={css.item}>
+            <RecipeCard data={recipe} />
+          </li>
+        ))}
+      </ul>
+      {listOnSearch
+        ? hasMore && <LoadMoreBtn onClick={handleLoadMoreOnSearch} />
+        : hasMore && <LoadMoreBtn onClick={handleLoadMore} />}
+    </div>
+  );
+};
+
+export default RecipeList;
