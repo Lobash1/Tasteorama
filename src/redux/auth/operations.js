@@ -2,9 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const api = axios.create({
-  baseURL: import.meta.env.DEV
-    ? '/api'
-    : 'https://project-lucky7.onrender.com/api/',
+  baseURL: import.meta.env.DEV ? '/api' : 'http://localhost:5173/',
   withCredentials: true,
 });
 

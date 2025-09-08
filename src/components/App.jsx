@@ -8,12 +8,12 @@ import { refreshUser } from '../redux/auth/operations.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsRefreshing } from '../redux/auth/selectors.js';
 
-// const RecipeViewPage = lazy(() =>
-// import("../pages/RecipeViewPage/RecipeViewPage.jsx")
-// );
-// const ProfilePage = lazy(() => import("../pages/ProfilePage/ProfilePage"));
+const RecipeViewPage = lazy(() =>
+  import('../pages/RecipeViewPage/RecipeViewPage.jsx')
+);
+// const ProfilePage = lazy(() => import('../pages/ProfilePage/ProfilePage'));
 // const AddRecipePage = lazy(() =>
-//   import("../pages/AddRecipePage/AddRecipePage.jsx")
+// import('../pages/AddRecipePage/AddRecipePage.jsx')
 // );
 const NotFoundPage = lazy(() =>
   import('../pages/NotFoundPage/NotFoundPage.jsx')
@@ -36,8 +36,8 @@ export default function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
-          <Route
+          <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
+          {/* <Route
             path="/profile/:recipeType"
             element={
               <PrivateRoute>
@@ -48,10 +48,8 @@ export default function App() {
           <Route path="/not-found" element={<NotFoundPage />} />
           <Route path="/auth/register" element={<RegisterPage />} />
           <Route path="/auth/login" element={<LoginPage />} />
-          {/* 
-         
-          
-          <Route
+
+          {/* <Route
             path="/add-recipe"
             element={
               <PrivateRoute>
