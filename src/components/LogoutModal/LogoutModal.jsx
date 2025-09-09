@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import css from './LogoutModal.module.css';
 import { useDispatch } from 'react-redux';
-import { logOutThunk } from '../../redux/auth/operations.js';
+import { logOutThunk } from '../../redux/auth/operation';
 
 const LogOutModal = ({ onToggleLogOut, onToggleMenu }) => {
   const dispatch = useDispatch();

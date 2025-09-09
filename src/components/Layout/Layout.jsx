@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Header from '../Header/Header.jsx';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import css from './Layout.module.css';
 

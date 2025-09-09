@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { Field, Formik, Form, ErrorMessage } from 'formik';
 import { Link, useNavigate } from 'react-router-dom';
-import { usersLogin } from '../../helpers/schema.js';
-import { loginThunk } from '../../redux/auth/operations.js';
+import { usersLogin } from '../../helpers/schema';
+import { loginThunk } from '../../redux/auth/operation';
 import { useEffect, useState } from 'react';
 import s from './LoginForm.module.css';
 

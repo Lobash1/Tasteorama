@@ -1,9 +1,9 @@
-import RecipeCard from '../RecipeCard/RecipeCard.jsx';
-import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn.jsx';
+import RecipeCard from '../RecipeCard/RecipeCard';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import css from './RecipeList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { nextPage, nextPageOnSearch } from '../../redux/recipes/slice.js';
-import { selectIsLoading } from '../../redux/recipes/selectors.js';
+import { nextPage, nextPageOnSearch } from '../../redux/recipes/slice';
+import { selectIsLoading } from '../../redux/recipes/selectors';
 import { HashLoader } from 'react-spinners';
 
 const RecipeList = ({ recipes, total, listOnSearch }) => {

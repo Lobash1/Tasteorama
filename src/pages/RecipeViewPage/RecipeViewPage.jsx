@@ -6,9 +6,10 @@ import {
   addFavoriteRecipe,
   removeFavoriteRecipe,
 } from '../../redux/recipes/operations.js';
-import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
-import RecipeDetails from '../../components/RecipeDetails/RecipeDetails.jsx';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import RecipeDetails from '../../components/RecipeDetails/RecipeDetails';
 import { HashLoader } from 'react-spinners';
+
 import css from './RecipeViewPage.module.css';
 
 const RecipeViewPage = () => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
-import { registerThunk } from '../../redux/auth/operations.js';
+import { registerThunk } from '../../redux/auth/operation';
 import { Link, useNavigate } from 'react-router-dom';
-import { usersRegister } from '../../helpers/schema.js';
+import { usersRegister } from '../../helpers/schema';
 import s from './RegistrationForm.module.css';
 
 const RegistrationForm = () => {

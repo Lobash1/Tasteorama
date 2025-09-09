@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import css from './SearchRecipes.module.css';
-import { validationSchema } from '../../helpers/schema.js';
+import { validationSchema } from '../../helpers/schema';
 
 const SearchRecipes = ({ onSearch }) => {
   return (

@@ -7,7 +7,7 @@
   border-radius: 32px;
   padding: 48px 32px;
   max-width: 362px;
-  margin: 56px 0;
+  margin: 91px 0;
 }
 
 .form {
@@ -22,7 +22,6 @@
   margin-bottom: 20px;
   text-align: center;
   color: #000;
-  font-style: normal;
 }
 
 .label {
@@ -42,31 +41,27 @@
   font-weight: 400;
   outline: none;
   transition: all 0.3s ease-in-out;
+
   margin-top: 4px;
   box-sizing: border-box;
 }
-
 input:focus {
   border-color: #d9d9d9;
   outline: 2px solid rgba(132, 131, 153, 0.5);
 }
-
 .invalid {
   border-color: #c80000 !important;
   outline: 2px solid rgba(200, 0, 0, 0.3);
   color: #000;
 }
-
 .error {
   color: #c80000;
   font-size: 12px;
   margin-top: 4px;
 }
-
 input:not(:placeholder-shown) {
   color: #000;
 }
-
 .passwordField {
   position: relative;
 }
@@ -114,7 +109,7 @@ input:not(:placeholder-shown) {
   border-radius: 8px;
   cursor: pointer;
   height: 36px;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
   margin-top: 11px;
   transition: all 0.3s ease;
 }
@@ -183,7 +178,7 @@ input:not(:placeholder-shown) {
   .formWrapper {
     min-width: 522px;
     min-height: 399px;
-    margin: 132px 0px;
+    margin: 262px 123px;
   }
 
   .title {
@@ -217,7 +212,9 @@ input:not(:placeholder-shown) {
 
 @media (min-width: 1440px) {
   .formWrapper {
+    border-radius: 25px;
     min-width: 420px;
+    min-height: 399px;
   }
 
   .title {

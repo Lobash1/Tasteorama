@@ -1,4 +1,4 @@
-import { api } from '../redux/auth/operations.js';
+import { api } from '../redux/auth/operation.js';
 
 export const fetchRecipeById = recipeId => {
   return api

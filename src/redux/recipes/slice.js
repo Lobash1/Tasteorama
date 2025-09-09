@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchFavorites, fetchRecipesByType } from "./operations.js";
-import { removeFavoriteRecipe } from "./operations.js";
-import { fetchAllRecipes, fetchRecipesForQuery } from ".//operations.js";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchFavorites, fetchRecipesByType } from './operations';
+import { removeFavoriteRecipe } from './operations';
+import { fetchAllRecipes, fetchRecipesForQuery } from './operations';
 
-const handlePending = (state) => {
+const handlePending = state => {
   state.isLoading = true;
 };
 
@@ -25,30 +25,30 @@ const initialState = {
 };
 
 const recipesSlice = createSlice({
-  name: "recipes",
+  name: 'recipes',
   initialState,
   reducers: {
-    nextPage: (state) => {
+    nextPage: state => {
       state.page += 1;
     },
-    resetPage: (state) => {
+    resetPage: state => {
       state.page = 1;
     },
-    nextPageOnSearch: (state) => {
+    nextPageOnSearch: state => {
       state.pageOnSearch += 1;
     },
-    resetPageOnSearch: (state) => {
+    resetPageOnSearch: state => {
       state.pageOnSearch = 1;
     },
-    resetSearchResults: (state) => {
+    resetSearchResults: state => {
       state.itemsOnSearch = [];
       state.total = 0;
       state.pageOnSearch = 1;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(fetchRecipesByType.pending, (state) => {
+      .addCase(fetchRecipesByType.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -65,7 +65,7 @@ const recipesSlice = createSlice({
       .addCase(removeFavoriteRecipe.fulfilled, (state, action) => {
         const removedId = action.meta.arg;
         state.favorites = state.favorites.filter(
-          (recipe) => recipe._id !== removedId
+          recipe => recipe._id !== removedId
         );
       })
 
@@ -109,10 +109,10 @@ const recipesSlice = createSlice({
         state.error = null;
         state.favorites = results;
       })
-      .addCase(fetchFavorites.rejected, (state) => {
+      .addCase(fetchFavorites.rejected, state => {
         state.error = null;
       })
-      .addCase(fetchFavorites.pending, (state) => {
+      .addCase(fetchFavorites.pending, state => {
         state.isLoading = true;
         state.error = null;
       });

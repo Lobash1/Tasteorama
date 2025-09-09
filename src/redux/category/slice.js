@@ -1,30 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchCategory } from "./operations.js";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchCategory } from './operation';
 
 const initialState = {
   category: [],
-  requestState: "",
+  requestState: '',
   loading: false,
   error: null,
 };
 
 const slice = createSlice({
-  name: "category",
+  name: 'category',
   initialState,
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
       .addCase(fetchCategory.fulfilled, (state, action) => {
         state.category = action.payload;
-        state.requestState = "fulfilled";
+        state.requestState = 'fulfilled';
         state.loading = false;
       })
-      .addCase(fetchCategory.pending, (state) => {
-        state.requestState = "pending";
+      .addCase(fetchCategory.pending, state => {
+        state.requestState = 'pending';
         state.loading = true;
       })
       .addCase(fetchCategory.rejected, (state, action) => {
         state.loading = false;
-        state.requestState = "rejected";
+        state.requestState = 'rejected';
         state.error = action.payload;
       });
   },

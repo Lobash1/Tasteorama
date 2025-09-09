@@ -5,5 +5,6 @@ export const useNotFoundPage = () => {
   const navigate = useNavigate();
   return useCallback(() => {
     navigate('/not-found');
+    // eslint-disable-next-line 
   }, []);
 };

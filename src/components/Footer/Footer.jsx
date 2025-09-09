@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation.jsx';
-import Container from '../Container/Container.jsx';
+import Navigation from '../Navigation/Navigation';
+import Container from '../Container/Container';
 import css from './Footer.module.css';
 
 const Footer = () => {

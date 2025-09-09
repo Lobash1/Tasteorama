@@ -1,10 +1,8 @@
 import clsx from "clsx";
-import css from "./Container.module.css";
+import css from "./Container.module.css"
 
-export default function Container({ children, className }) {
-  return (
-    <div className={clsx(css.container, className && className)}>
-      {children}
-    </div>
-  );
+const Container = ({children, className}) => {
+    return ( <div className={clsx(css.container, className && className)}>{children}</div> );
 }
+ 
+export default Container;

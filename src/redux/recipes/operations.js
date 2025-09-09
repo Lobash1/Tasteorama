@@ -1,8 +1,8 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { api } from "../auth/operations.js";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { api } from '../auth/operation';
 
 export const fetchRecipesByType = createAsyncThunk(
-  "recipes/fetchByType",
+  'recipes/fetchByType',
   async ({ type, page = 1 }, thunkAPI) => {
     try {
       const response = await api.get(`/recipes/${type}?page=${page}`);
@@ -17,7 +17,7 @@ export const fetchRecipesByType = createAsyncThunk(
 );
 
 export const removeFavoriteRecipe = createAsyncThunk(
-  "recipes/removeFavorite",
+  'recipes/removeFavorite',
   async (recipeId, thunkAPI) => {
     try {
       const response = await api.delete(`/recipes/favorites/${recipeId}`);
@@ -29,7 +29,7 @@ export const removeFavoriteRecipe = createAsyncThunk(
 );
 
 export const addFavoriteRecipe = createAsyncThunk(
-  "recipes/addFavorite",
+  'recipes/addFavorite',
   async (recipeId, thunkAPI) => {
     try {
       const response = await api.post(`/recipes/favorites/${recipeId}`);
@@ -41,10 +41,10 @@ export const addFavoriteRecipe = createAsyncThunk(
 );
 
 export const fetchAllRecipes = createAsyncThunk(
-  "recipes/fetchAll",
+  'recipes/fetchAll',
   async ({ page = 1 }, thunkAPI) => {
     try {
-      const response = await api.get("/recipes/search", {
+      const response = await api.get('/recipes/search', {
         params: { page },
       });
       return {
@@ -59,7 +59,7 @@ export const fetchAllRecipes = createAsyncThunk(
 );
 
 export const fetchRecipesForQuery = createAsyncThunk(
-  "recipes/fetchQueryRecipes",
+  'recipes/fetchQueryRecipes',
   async (
     { searchQuery, pageOnSearch = 1, selectedCategory, selectedIngredient },
     thunkAPI
@@ -81,7 +81,7 @@ export const fetchRecipesForQuery = createAsyncThunk(
 );
 
 export const fetchFavorites = createAsyncThunk(
-  "recipes/fetchFavRec",
+  'recipes/fetchFavRec',
   async (_, thunkAPI) => {
     try {
       const response = await api.get(`/recipes/favorites`);
@@ -95,11 +95,11 @@ export const fetchFavorites = createAsyncThunk(
 );
 
 export const addRecipe = createAsyncThunk(
-  "recipes/addRecipe",
+  'recipes/addRecipe',
   async (recipe, thunkAPI) => {
     try {
-      const response = await api.post("/recipes/own", recipe, {
-        headers: { "Content-Type": "multipart/form-data" },
+      const response = await api.post('/recipes/own', recipe, {
+        headers: { 'Content-Type': 'multipart/form-data' },
       });
       return response.data.data;
     } catch (error) {
