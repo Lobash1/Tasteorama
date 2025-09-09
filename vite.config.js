@@ -1,20 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 
-// https://vite.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      '/api': 'https://project-lucky7.onrender.com',
+    },
+  },
   plugins: [react()],
   build: {
     sourcemap: true,
   },
 });
-
-// import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react-swc';
-
-// export default defineConfig({
-//   plugins: [react()],
-//   build: {
-//     sourcemap: true,
-//   },
-// });
